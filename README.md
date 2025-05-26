@@ -22,103 +22,7 @@ QR2P2P enables seamless cross-border payments by allowing users to upload QR cod
 
 ## Technologies Used
 
-### Frontend
-- **React/Next.js**: Modern web framework for responsive UI
-- **TypeScript**: Type-safe development
-- **TailwindCSS**: Utility-first styling
-- **React Query**: Efficient data fetching and caching
-
-### Backend
-- **Node.js**: JavaScript runtime
-- **Express/Fastify**: Web application framework
-- **TypeScript**: Type-safe server development
-- **PostgreSQL**: Relational database for job storage
-- **Redis**: Caching and real-time matching
-
-### Core Systems
-- **QR Code Parsing**: Multi-format QR code interpretation
-- **Lightning Network**: Bitcoin micropayments via LND/CLN
-- **eCash Integration**: Private and scalable payments
-- **WebSocket**: Real-time job updates and notifications
-
-### Infrastructure
-- **Docker**: Containerized deployment
-- **NGINX**: Reverse proxy and load balancing
-- **PM2**: Process management
-
-## Installation & Setup
-
-### Prerequisites
-- Node.js 18+ and npm/yarn/pnpm
-- PostgreSQL 14+
-- Redis 6+
-- Docker (optional)
-
-### Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/your-org/qr2p2p.git
-cd qr2p2p
-
-# Install dependencies
-npm install
-
-# Copy environment configuration
-cp .env.example .env
-
-# Configure your environment variables
-# - Database connection strings
-# - Lightning node credentials
-# - API keys for supported payment systems
-
-# Run database migrations
-npm run db:migrate
-
-# Start development servers
-npm run dev
-
-# Backend will run on http://localhost:3001
-# Frontend will run on http://localhost:3000
-```
-
-### Production Deployment
-
-```bash
-# Build the application
-npm run build
-
-# Start with PM2
-npm run start:prod
-
-# Or use Docker
-docker-compose up -d
-```
-
-## Environment Variables
-
-Create a `.env` file based on `.env.example`:
-
-```env
-# Database
-DATABASE_URL=postgresql://user:password@localhost:5432/qr2p2p
-REDIS_URL=redis://localhost:6379
-
-# Lightning Network
-LND_HOST=localhost:10009
-LND_MACAROON_PATH=/path/to/admin.macaroon
-LND_TLS_CERT_PATH=/path/to/tls.cert
-
-# API Configuration
-PORT=3001
-JWT_SECRET=your-jwt-secret
-CORS_ORIGIN=http://localhost:3000
-
-# Payment System APIs (optional)
-PROMPTPAY_API_KEY=your-promptpay-key
-QRIS_API_KEY=your-qris-key
-UPI_API_KEY=your-upi-key
-```
+*Technology details to be determined - open for ideas and contributions*
 
 ## API Documentation
 
@@ -210,12 +114,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 By using QR2P2P, you acknowledge that you have read, understood, and agree to these disclaimers and assume all associated risks.
 
-## Support
-
-- Documentation: [docs/](docs/)
-- Issues: [GitHub Issues](https://github.com/your-org/qr2p2p/issues)
-- Community: [Discord Server](https://discord.gg/qr2p2p)
-- Email: support@qr2p2p.io
 
 ## Roadmap
 
@@ -224,7 +122,6 @@ By using QR2P2P, you acknowledge that you have read, understood, and agree to th
 - [ ] eCash settlement support
 - [ ] Mobile applications (iOS/Android)
 - [ ] Advanced matching algorithms
-- [ ] Multi-signature Bitcoin support
 - [ ] Merchant dashboard and APIs
 - [ ] Automated compliance tools
 - [ ] Decentralized governance
