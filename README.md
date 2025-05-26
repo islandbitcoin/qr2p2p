@@ -1,5 +1,8 @@
 # QR2P2P
 
+![image](https://github.com/user-attachments/assets/ecb88bcc-cdc0-4f76-8762-70e54961bdf9)
+
+
 A decentralized QR paycode marketplace connecting global payment systems through Bitcoin, Lightning, and eCash settlements.
 
 ## Overview
