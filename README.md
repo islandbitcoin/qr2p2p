@@ -1,46 +1,24 @@
-# QRBridge
+# QR2P2P
 
-A decentralized QR paycode marketplace connecting global payment systems through crypto settlements.
+A decentralized QR paycode marketplace connecting global payment systems through Bitcoin, Lightning, and eCash settlements.
 
 ## Overview
 
-QRBridge enables seamless cross-border payments by allowing users to upload QR codes from local fiat payment systems (PromptPay, QRIS, UPI, etc.) and have them paid by "Earners" who are compensated in cryptocurrency. This creates a bridge between traditional payment rails and the crypto economy.
+QR2P2P enables seamless cross-border payments by allowing users to upload QR codes from local fiat payment systems (PromptPay, QRIS, UPI, etc.) and have them paid by "Earners" who are compensated in Bitcoin, Lightning, or eCash. This creates a bridge between traditional payment rails and the Bitcoin economy.
 
 ## Key Features
 
 - **QR Code Marketplace**: Upload and browse payment QR codes from various fiat systems
 - **Decentralized Matching**: Connect payment requesters with local earners
-- **Crypto Settlements**: Earners receive Bitcoin Lightning or USDT compensation
+- **Bitcoin Settlements**: Earners receive Bitcoin, Lightning, or eCash compensation
 - **Multi-Region Support**: Support for PromptPay (Thailand), QRIS (Indonesia), UPI (India), and more
 - **Real-time Matching**: Instant pairing of payment requests with available earners
 - **Escrow Protection**: Secure settlement mechanism protecting both parties
 
-## Use Cases
 
-1. **Cross-border Remittances**: Send money to family abroad without traditional banking
-2. **Travel Payments**: Pay local merchants while traveling using your crypto holdings
-3. **Freelancer Payments**: Receive payments in crypto while clients pay with local methods
-4. **Merchant Services**: Accept global payments while receiving local fiat
-5. **Crypto Earning**: Monetize your local payment access by serving international users
+## Architecture
 
-## Architecture Overview
-
-```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Requester     │    │    QRBridge      │    │     Earner      │
-│                 │    │    Platform      │    │                 │
-│ 1. Upload QR    │───▶│                  │◀───│ 3. Browse Jobs  │
-│ 2. Lock Crypto  │    │  Job Matching    │    │ 4. Accept Job   │
-│                 │    │  Escrow System   │    │ 5. Pay QR Code  │
-│ 6. Release Fund │◀───│  Settlement      │───▶│ 6. Get Crypto   │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-
-Components:
-- Frontend: React/Next.js dashboard for job posting and browsing
-- Backend: Express/Fastify API for job management and matching
-- Core: Shared QR parsing, validation, and settlement logic
-- Settlement: Lightning Network and USDT payment processing
-```
+*Architecture details to be determined - open for ideas and contributions*
 
 ## Technologies Used
 
@@ -60,7 +38,7 @@ Components:
 ### Core Systems
 - **QR Code Parsing**: Multi-format QR code interpretation
 - **Lightning Network**: Bitcoin micropayments via LND/CLN
-- **USDT Integration**: Stablecoin settlements on multiple chains
+- **eCash Integration**: Private and scalable payments
 - **WebSocket**: Real-time job updates and notifications
 
 ### Infrastructure
@@ -80,8 +58,8 @@ Components:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/qrbridge.git
-cd qrbridge
+git clone https://github.com/your-org/qr2p2p.git
+cd qr2p2p
 
 # Install dependencies
 npm install
@@ -123,7 +101,7 @@ Create a `.env` file based on `.env.example`:
 
 ```env
 # Database
-DATABASE_URL=postgresql://user:password@localhost:5432/qrbridge
+DATABASE_URL=postgresql://user:password@localhost:5432/qr2p2p
 REDIS_URL=redis://localhost:6379
 
 # Lightning Network
@@ -188,7 +166,7 @@ npm run test:e2e
 
 - Always validate QR code authenticity before processing
 - Implement proper rate limiting on all endpoints
-- Use secure escrow mechanisms for crypto holdings
+- Use secure escrow mechanisms for Bitcoin holdings
 - Regularly audit smart contracts and settlement logic
 - Implement proper KYC/AML procedures where required
 
@@ -201,28 +179,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ⚠️ **Important Legal Notice**
 
 ### Regulatory Compliance
-- QRBridge operates in a complex regulatory environment involving cryptocurrency, cross-border payments, and financial services
+- QR2P2P operates in a complex regulatory environment involving Bitcoin, cross-border payments, and financial services
 - Users are responsible for compliance with local laws and regulations in their jurisdiction
-- Some jurisdictions may prohibit or restrict cryptocurrency trading, money transmission, or cross-border payments
+- Some jurisdictions may prohibit or restrict Bitcoin trading, money transmission, or cross-border payments
 - Consult with legal professionals before using this system commercially
 
 ### Payment System Risks
 - Integration with third-party payment systems (PromptPay, QRIS, UPI) carries inherent risks
 - Payment reversals, fraud, or system outages may impact settlements
-- QRBridge is not responsible for failures or limitations of underlying payment rails
+- QR2P2P is not responsible for failures or limitations of underlying payment rails
 - Users should understand the terms and risks of each payment system they interact with
 
 ### Financial Risks
-- Cryptocurrency values are volatile and may result in financial loss
+- Bitcoin values are volatile and may result in financial loss
 - Settlement times and fees may vary based on network conditions
 - Users are responsible for their own funds and private key security
-- No guarantee of payment completion or cryptocurrency delivery
+- No guarantee of payment completion or Bitcoin delivery
 
 ### Service Availability
-- QRBridge is provided "as is" without warranties of any kind
+- QR2P2P is provided "as is" without warranties of any kind
 - Service availability, accuracy, and performance are not guaranteed
 - The platform may be discontinued or modified at any time
-- Users should not rely on QRBridge for critical or time-sensitive payments
+- Users should not rely on QR2P2P for critical or time-sensitive payments
 
 ### Data and Privacy
 - QR codes may contain sensitive payment information
@@ -230,27 +208,27 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Payment information may be shared with settlement counterparties
 - Review our Privacy Policy for detailed data handling practices
 
-By using QRBridge, you acknowledge that you have read, understood, and agree to these disclaimers and assume all associated risks.
+By using QR2P2P, you acknowledge that you have read, understood, and agree to these disclaimers and assume all associated risks.
 
 ## Support
 
 - Documentation: [docs/](docs/)
-- Issues: [GitHub Issues](https://github.com/your-org/qrbridge/issues)
-- Community: [Discord Server](https://discord.gg/qrbridge)
-- Email: support@qrbridge.io
+- Issues: [GitHub Issues](https://github.com/your-org/qr2p2p/issues)
+- Community: [Discord Server](https://discord.gg/qr2p2p)
+- Email: support@qr2p2p.io
 
 ## Roadmap
 
 - [ ] MVP: Basic QR job posting and matching
 - [ ] Lightning Network integration
-- [ ] USDT settlement support
+- [ ] eCash settlement support
 - [ ] Mobile applications (iOS/Android)
 - [ ] Advanced matching algorithms
-- [ ] Multi-chain cryptocurrency support
+- [ ] Multi-signature Bitcoin support
 - [ ] Merchant dashboard and APIs
 - [ ] Automated compliance tools
-- [ ] Decentralized governance token
+- [ ] Decentralized governance
 
 ---
 
-*QRBridge: Bridging the gap between traditional finance and the crypto economy, one QR code at a time.*
+*QR2P2P: Bridging the gap between traditional finance and the Bitcoin economy, one QR code at a time.*
